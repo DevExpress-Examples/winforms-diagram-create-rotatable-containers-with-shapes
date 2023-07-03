@@ -1,3 +1,6 @@
+<!-- default badges list -->
+[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+<!-- default badges end -->
 # WinForms - How to support rotating for containers with shapes
 
 This example demonstrates how to support rotating for containers with shapes. Containers don't supply the rotating feature by default. However, this feature is implemented in the base class. If you need to enable this feature to rotate custom groups of shapes or custom shapes created within a container, you can enable this feature at the DiagramContainer class descendant:
