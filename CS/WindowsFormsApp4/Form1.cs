@@ -1,22 +1,15 @@
 ﻿using DevExpress.Diagram.Core;
 using DevExpress.Diagram.Core.Native;
 using DevExpress.Utils;
-using DevExpress.Utils.Serializing;
 using DevExpress.XtraDiagram;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp4
-{
+namespace WindowsFormsApp4 {
     public class CustomDiagramContainer : DiagramContainer {
         public override bool? CanRotate { get; set; }
     }
@@ -44,7 +37,8 @@ namespace WindowsFormsApp4
         private void DiagramControl1_ItemsRotating(object sender, DiagramItemsRotatingEventArgs e) {
             var groups = e.Items.GroupBy(x => x.Item.ParentItem);
             foreach (var group in groups) {
-                if (group.Key is CustomDiagramContainer container) {
+                if (group.Key is CustomDiagramContainer) {
+                    var container = (CustomDiagramContainer)group.Key;
                     var containingRect = container.Items.Select(x => x.RotatedDiagramBounds().BoundedRect()).Aggregate(Rect.Empty, Rect.Union);
                     container.Position = new PointFloat((float)containingRect.X, (float)containingRect.Y);
                     container.Width = (float)containingRect.Width;
@@ -79,6 +73,7 @@ namespace WindowsFormsApp4
                 CanChangeParent = false,
                 CanEdit = true,
                 CanResize = false,
+                CanRotate = false,
                 CanCopyWithoutParent = false,
                 CanDeleteWithoutParent = false,
                 CanMove = false,
