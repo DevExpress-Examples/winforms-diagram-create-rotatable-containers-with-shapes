@@ -27,9 +27,9 @@ namespace WindowsFormsApp4 {
 
         private void DiagramControl1_BeforeItemsRotating(object sender, DiagramBeforeItemsRotatingEventArgs e) {
             var containers = e.Items.OfType<CustomDiagramContainer>();
-            foreach (var container in containers) {
-                e.Items.Remove(container);
-                foreach (var item in container.Items)
+            foreach (var customContainer in containers) {
+                e.Items.Remove(customContainer);
+                foreach (var item in customContainer.Items)
                     e.Items.Add(item);
             }
         }
