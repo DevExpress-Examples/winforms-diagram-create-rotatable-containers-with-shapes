@@ -8,7 +8,7 @@
 
 This example demonstrates how to allow users to rotate containers with shapes.
 
-![image](https://github.com/DevExpress-Examples/win-rotating-containers-with-shapes/assets/65009440/3b4310fe-5d8e-4025-81de-8ecbcd7005fe)
+![image](https://github.com/DevExpress-Examples/winforms-diagram-create-rotatable-containers-with-shapes/assets/65009440/7f3fc737-6e9a-4e21-82b2-a80818cd2521)
 
 ## Implementation Details
 
