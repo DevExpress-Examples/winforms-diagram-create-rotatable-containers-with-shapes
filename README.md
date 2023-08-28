@@ -66,4 +66,5 @@ Default diagram containers do not support rotation operations. However, these op
 
 ## More Examples
 
-- [WinForms DiagramControl - Complex Expressions and Custom Functions in Shape Templates](https://github.com/DevExpress-Examples/winforms-diagram-use-custom-functions-in-shape-templates)
+- [WinForms DiagramControl - Create Custom Shapes Based on Diagram Containers](https://github.com/DevExpress-Examples/winforms-diagram-create-custom-shapes-based-on-diagram-containers)
+- [WinForms DiagramControl - Proportionally Resize Shapes Within the Parent Container](https://github.com/DevExpress-Examples/winforms-diagram-proportionally-resize-shapes-within-container)
