@@ -6,13 +6,13 @@
 
 # WinForms DiagramControl - Create Rotatable Containers with Shapes
 
-This example demonstrates how to allow users to rotate containers with shapes.
+This example allows users to rotate containers with shapes.
 
 ![image](https://github.com/DevExpress-Examples/winforms-diagram-create-rotatable-containers-with-shapes/assets/65009440/7f3fc737-6e9a-4e21-82b2-a80818cd2521)
 
 ## Implementation Details
 
-Default diagram containers do not support rotation operations. However, these operations are implemented in the base class. You can define a custom rotatable container in the following way:
+Default diagram containers do not support rotation-related operations. These operations, however, are implemented in the base class. You can define a custom rotatable container in the following manner:
 
 1. Create a [DiagramContainer](https://docs.devexpress.com/WindowsForms/DevExpress.XtraDiagram.DiagramContainer) class descendant.
 2. Override the [CanRotate](https://docs.devexpress.com/WindowsForms/DevExpress.XtraDiagram.DiagramItem.CanRotate) property.
@@ -36,9 +36,9 @@ Default diagram containers do not support rotation operations. However, these op
    }
    ```
 
-   In this case, the `DiagramControl` rotates these inner items instead of the parent container.
+   In this instance, the `DiagramControl` rotates associated inner items instead of the parent container.
    
-4. Handle the [DiagramControl.ItemsRotating](https://docs.devexpress.com/WindowsForms/DevExpress.XtraDiagram.DiagramControl.ItemsRotating) event and correct the container position and size:
+4. Handle the [DiagramControl.ItemsRotating](https://docs.devexpress.com/WindowsForms/DevExpress.XtraDiagram.DiagramControl.ItemsRotating) event and correct the container’s position and size:
 
    ```csharp
    private void DiagramControl1_ItemsRotating(object sender, DiagramItemsRotatingEventArgs e) {
@@ -61,6 +61,7 @@ Default diagram containers do not support rotation operations. However, these op
 ## Documentation
 
 - [Containers and Lists](https://docs.devexpress.com/WindowsForms/117672/controls-and-libraries/diagrams/diagram-items/containers)
+- [Create Custom Diagram Items](https://docs.devexpress.com/WindowsForms/404797/controls-and-libraries/diagrams/diagram-items/create-custom-diagram-items)
 - [DiagramControl.BeforeItemsRotating](https://docs.devexpress.com/WindowsForms/DevExpress.XtraDiagram.DiagramControl.BeforeItemsRotating)
 - [DiagramControl.ItemsRotating](https://docs.devexpress.com/WindowsForms/DevExpress.XtraDiagram.DiagramControl.ItemsRotating)
 
